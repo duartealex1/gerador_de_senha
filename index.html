@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gerador de senha utilizando caracteres alfanuméricos de forma fácil."
+    />
+    <meta name="keywords" content="gerador de senhas, password" />
+    <meta name="author" content="ALEX DUARTE" />
+    <!-- essa tag faz o site atualizar a cada 5segundos <meta http-equiv="refresh" content="5"> -->
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="icon" type="image/ x-ico" href="img/goku.ico" />
+    <!-- bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <title>Gerador de senha - crie senhas facilmente</title>
+  </head>
+  <body>
+    <img
+      class="logo"
+      src="img/geradordesenha.png"
+      alt="Logo do gerador de senha"
+      title="gerador de senha"
+    />
+
+    <main class="container-input">
+      <span>
+        Tamanho
+        <span id="valor"></span>
+        caracteres
+      </span>
+      <input
+        id="range"
+        class="range"
+        type="range"
+        min="5"
+        max="20"
+        value="15"
+      />
+
+      <button id="button" class="button-cta" onclick="generatePassword()">
+        Gerar senha
+      </button>
+    </main>
+
+    <div
+      id="container-password"
+      onclick="copyPassword()"
+      class="container-password hide"
+    >
+      <span class="title">Sua senha gerada foi:</span>
+      <span id="password" class="password">*****</span>
+      <span class="tooltip">
+        Clique na senha para copiar.
+        <i class="bi bi-clipboard-check"></i>
+      </span>
+      <div class="copy"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
